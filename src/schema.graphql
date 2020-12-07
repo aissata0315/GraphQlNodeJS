@@ -1,0 +1,22 @@
+#custum types
+type Simplonien{
+  id: ID!
+  nom: String
+  prenom: String
+  email: String!
+}
+
+#Query
+type Query {
+  hello: String
+  simploniens:[Simplonien!]!
+  simplonien(id:ID!):Simplonien!
+}
+
+#Mutation
+type Mutation{
+  createApprenant(id: ID!, nom: String, prenom:String , email: String): Simplonien!
+  deleteApprenant(id: ID!): Boolean!
+}
+
+
